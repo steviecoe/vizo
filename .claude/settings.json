@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude_ai_Atlassian__getJiraIssue",
+      "Bash(npm --version)",
+      "Bash(pnpm install:*)",
+      "Bash(npx husky:*)",
+      "Bash(chmod +x /sites/vizo-image-gen/.husky/pre-commit)",
+      "Bash(pnpm --filter @vizo/shared build)",
+      "Bash(npx vitest:*)",
+      "Bash(npx next:*)",
+      "Bash(npx tsc:*)"
+    ]
+  }
+}

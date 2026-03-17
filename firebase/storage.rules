@@ -1,0 +1,38 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function isAdmin() {
+      return request.auth != null && request.auth.token.role == 'vg_admin';
+    }
+
+    function isTenantMember(tenantId) {
+      return request.auth != null && request.auth.token.tenantId == tenantId;
+    }
+
+    function isImpersonating(tenantId) {
+      return isAdmin()
+        && request.auth.token.impersonating == true
+        && request.auth.token.impersonatedTenantId == tenantId;
+    }
+
+    function canAccessTenant(tenantId) {
+      return isAdmin() || isImpersonating(tenantId) || isTenantMember(tenantId);
+    }
+
+    // Tenant-scoped storage
+    match /tenants/{tenantId}/{allPaths=**} {
+      allow read: if canAccessTenant(tenantId);
+      // Uploads allowed for tenant members (items, references)
+      allow write: if canAccessTenant(tenantId)
+        && request.resource.size < 20 * 1024 * 1024  // 20MB max
+        && request.resource.contentType.matches('image/.*');
+    }
+
+    // Deny everything else
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

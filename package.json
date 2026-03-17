@@ -1,0 +1,40 @@
+{
+  "name": "vizo-image-gen",
+  "private": true,
+  "version": "0.1.0",
+  "description": "B2B SaaS AI Image Generation Platform for Fashion Photography",
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "test:coverage": "turbo test:coverage",
+    "test:e2e": "turbo test:e2e",
+    "check": "turbo lint test",
+    "clean": "turbo clean",
+    "prepare": "husky",
+    "start": "node apps/web/.next/standalone/apps/web/server.js",
+    "deploy:prod": "bash scripts/deploy.sh"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "turbo": "^2.4.4",
+    "typescript": "^5.7.3"
+  },
+  "lint-staged": {
+    "apps/web/**/*.{ts,tsx}": [
+      "bash -c 'cd apps/web && npx tsc --noEmit'"
+    ],
+    "firebase/functions/**/*.{ts,tsx}": [
+      "bash -c 'cd firebase/functions && npx tsc --noEmit'"
+    ],
+    "packages/shared/**/*.{ts,tsx}": [
+      "bash -c 'cd packages/shared && npx tsc --noEmit'"
+    ]
+  }
+}
