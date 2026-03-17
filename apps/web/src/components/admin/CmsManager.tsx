@@ -269,7 +269,7 @@ export function CmsManager() {
           <button
             onClick={handleSave}
             disabled={status === 'saving'}
-            className="rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-brand-700 disabled:opacity-50"
+            className="rounded-full bg-stone-950 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-stone-800 disabled:opacity-50"
           >
             {status === 'saving' ? 'Saving...' : 'Save Article'}
           </button>
@@ -288,7 +288,7 @@ export function CmsManager() {
         </div>
         <button
           onClick={() => dispatch({ type: 'SET_CREATING' })}
-          className="rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-brand-700"
+          className="rounded-full bg-stone-950 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-stone-800"
         >
           New Article
         </button>
@@ -340,7 +340,7 @@ export function CmsManager() {
                   <td className="whitespace-nowrap px-6 py-4 text-right text-sm">
                     <button
                       onClick={() => dispatch({ type: 'SET_EDITING', article })}
-                      className="mr-3 text-brand-600 hover:text-brand-800"
+                      className="mr-3 text-stone-950 hover:text-stone-950"
                     >
                       Edit
                     </button>

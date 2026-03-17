@@ -174,7 +174,7 @@ export function BackgroundLibrary() {
           <p className="mt-1 text-sm text-stone-500">Define reusable backgrounds and settings for AI generation.</p>
         </div>
         {!showForm && (
-          <button onClick={() => dispatch({ type: 'SHOW_CREATE_FORM' })} className="rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700">
+          <button onClick={() => dispatch({ type: 'SHOW_CREATE_FORM' })} className="rounded-full bg-stone-950 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800">
             Add Background
           </button>
         )}
@@ -214,7 +214,7 @@ export function BackgroundLibrary() {
           </fieldset>
 
           <div className="mt-6 flex gap-3">
-            <button type="submit" disabled={isSubmitting} className="rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700 disabled:opacity-50">
+            <button type="submit" disabled={isSubmitting} className="rounded-full bg-stone-950 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800 disabled:opacity-50">
               {isSubmitting ? 'Saving...' : editingBg ? 'Update Background' : 'Create Background'}
             </button>
             <button type="button" onClick={() => dispatch({ type: 'HIDE_FORM' })} disabled={isSubmitting} className="rounded-md border border-stone-300 px-4 py-2 text-sm font-medium text-stone-700 hover:bg-stone-50">
@@ -247,7 +247,7 @@ export function BackgroundLibrary() {
               </div>
               <p className="mt-2 text-sm text-stone-600 line-clamp-2">{bg.description}</p>
               <div className="mt-4 flex gap-2">
-                <button onClick={() => dispatch({ type: 'SHOW_EDIT_FORM', bg })} className="text-sm text-brand-600 hover:text-brand-800">Edit</button>
+                <button onClick={() => dispatch({ type: 'SHOW_EDIT_FORM', bg })} className="text-sm text-stone-950 hover:text-stone-950">Edit</button>
                 <button onClick={() => handleDelete(bg.id)} className="text-sm text-red-600 hover:text-red-800">Delete</button>
               </div>
             </article>

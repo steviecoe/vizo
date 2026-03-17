@@ -195,7 +195,7 @@ export function CreditCostsManager() {
                             })
                           }
                           disabled={isDisabled}
-                          className="block w-24 rounded-md border border-stone-300 px-3 py-1.5 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 disabled:opacity-50"
+                          className="block w-24 rounded-md border border-stone-300 px-3 py-1.5 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950 disabled:opacity-50"
                         />
                         <span className="text-xs text-stone-400">credits</span>
                       </div>
@@ -227,7 +227,7 @@ export function CreditCostsManager() {
             <button
               type="submit"
               disabled={isDisabled}
-              className="rounded-full bg-brand-600 px-6 py-2 text-sm font-medium text-white hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-50"
+              className="rounded-full bg-stone-950 px-6 py-2 text-sm font-medium text-white hover:bg-stone-800 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {isDisabled ? 'Saving...' : 'Save Changes'}
             </button>

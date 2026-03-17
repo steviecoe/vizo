@@ -116,7 +116,7 @@ export function ProductGrid() {
             onChange={(e) =>
               dispatch({ type: 'SET_SEARCH', query: e.target.value })
             }
-            className="rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+            className="rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
             aria-label="Search products"
           />
 
@@ -126,7 +126,7 @@ export function ProductGrid() {
               onClick={() => dispatch({ type: 'SET_VIEW_MODE', mode: 'grid' })}
               className={`px-3 py-2 text-sm ${
                 viewMode === 'grid'
-                  ? 'bg-brand-50 text-brand-700'
+                  ? 'bg-stone-100 text-stone-950'
                   : 'bg-white text-stone-500 hover:text-stone-700'
               } rounded-l-md`}
               aria-pressed={viewMode === 'grid'}
@@ -137,7 +137,7 @@ export function ProductGrid() {
               onClick={() => dispatch({ type: 'SET_VIEW_MODE', mode: 'list' })}
               className={`px-3 py-2 text-sm ${
                 viewMode === 'list'
-                  ? 'bg-brand-50 text-brand-700'
+                  ? 'bg-stone-100 text-stone-950'
                   : 'bg-white text-stone-500 hover:text-stone-700'
               } rounded-r-md`}
               aria-pressed={viewMode === 'list'}

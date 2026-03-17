@@ -99,7 +99,7 @@ export default function BootstrapPage() {
             <p className="mt-1 text-xs text-green-600">UID: {result.uid}</p>
             <a
               href="/admin/tenants"
-              className="mt-4 inline-block rounded-md bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700"
+              className="mt-4 inline-block rounded-md bg-stone-950 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800"
             >
               Go to Admin Dashboard
             </a>
@@ -114,7 +114,7 @@ export default function BootstrapPage() {
             </p>
             <a
               href="/admin/tenants"
-              className="mt-3 inline-block rounded-md bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700"
+              className="mt-3 inline-block rounded-md bg-stone-950 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800"
             >
               Go to Admin Dashboard
             </a>
@@ -130,7 +130,7 @@ export default function BootstrapPage() {
             <button
               onClick={handleBootstrap}
               disabled={isDisabled}
-              className="w-full rounded-md bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-50"
+              className="w-full rounded-md bg-stone-950 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {status === 'bootstrapping'
                 ? 'Bootstrapping...'
@@ -157,7 +157,7 @@ export default function BootstrapPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={isDisabled}
-                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 disabled:opacity-50"
+                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950 disabled:opacity-50"
                 />
               </div>
               <div>
@@ -174,13 +174,13 @@ export default function BootstrapPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   disabled={isDisabled}
-                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 disabled:opacity-50"
+                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950 disabled:opacity-50"
                 />
               </div>
               <button
                 type="submit"
                 disabled={isDisabled}
-                className="w-full rounded-md bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-50"
+                className="w-full rounded-md bg-stone-950 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 {status === 'signing-in' ? 'Signing in...' : 'Sign In'}
               </button>

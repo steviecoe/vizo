@@ -326,7 +326,7 @@ export function CreateTenantDialog({ isOpen, onClose, onCreated }: CreateTenantD
                   handleClose();
                   onCreated();
                 }}
-                className="flex-1 rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700"
+                className="flex-1 rounded-full bg-stone-950 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800"
               >
                 Close
               </button>
@@ -371,7 +371,7 @@ export function CreateTenantDialog({ isOpen, onClose, onCreated }: CreateTenantD
                   onChange={(e) =>
                     dispatch({ type: 'SET_NAME_WITH_SLUG', name: e.target.value })
                   }
-                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
                   placeholder="Fashion Brand Co"
                 />
                 {fieldErrors.name && (
@@ -391,7 +391,7 @@ export function CreateTenantDialog({ isOpen, onClose, onCreated }: CreateTenantD
                     dispatch({ type: 'TOUCH_SLUG' });
                     dispatch({ type: 'SET_FIELD', field: 'slug', value: e.target.value });
                   }}
-                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
                   placeholder="fashion-brand-co"
                 />
                 <p className="mt-1 text-xs text-stone-400">
@@ -415,7 +415,7 @@ export function CreateTenantDialog({ isOpen, onClose, onCreated }: CreateTenantD
                   onChange={(e) =>
                     dispatch({ type: 'SET_FIELD', field: 'pricePerCredit', value: e.target.value })
                   }
-                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
                   placeholder="0.50"
                 />
                 {fieldErrors.pricePerCredit && (
@@ -443,7 +443,7 @@ export function CreateTenantDialog({ isOpen, onClose, onCreated }: CreateTenantD
                     onChange={(e) =>
                       dispatch({ type: 'SET_FIELD', field: key, value: e.target.checked })
                     }
-                    className="h-4 w-4 rounded border-stone-300 text-brand-600 focus:ring-brand-500"
+                    className="h-4 w-4 rounded border-stone-300 text-stone-950 focus:ring-stone-950"
                   />
                   <span className="text-sm text-stone-700">{label}</span>
                 </label>
@@ -462,7 +462,7 @@ export function CreateTenantDialog({ isOpen, onClose, onCreated }: CreateTenantD
                 }
                 rows={3}
                 maxLength={2000}
-                className="block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                className="block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
                 placeholder="High-end editorial fashion photography style..."
               />
             </fieldset>
@@ -481,7 +481,7 @@ export function CreateTenantDialog({ isOpen, onClose, onCreated }: CreateTenantD
                   onChange={(e) =>
                     dispatch({ type: 'SET_FIELD', field: 'geminiApiKey', value: e.target.value })
                   }
-                  className="block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                  className="block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
                   placeholder="Enter Gemini Nano Banana Pro 2 API key"
                 />
                 <p className="mt-1 text-xs text-stone-400">
@@ -512,7 +512,7 @@ export function CreateTenantDialog({ isOpen, onClose, onCreated }: CreateTenantD
                       handleAddEmail();
                     }
                   }}
-                  className="block flex-1 rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                  className="block flex-1 rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
                   placeholder="admin@brand.com"
                 />
                 <button
@@ -570,7 +570,7 @@ export function CreateTenantDialog({ isOpen, onClose, onCreated }: CreateTenantD
               type="submit"
               onClick={handleSubmit}
               disabled={isDisabled}
-              className="rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-50"
+              className="rounded-full bg-stone-950 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {isDisabled ? 'Creating...' : 'Create Tenant'}
             </button>

@@ -156,7 +156,7 @@ export function HomepageEditor() {
           <h1 className="text-2xl font-bold font-display text-stone-900">Homepage Editor</h1>
           <p className="mt-1 text-sm text-stone-500">Manage the public homepage content.</p>
         </div>
-        <button onClick={handleSave} disabled={state.saving} className="rounded-full bg-brand-600 px-6 py-2 text-sm font-medium text-white hover:bg-brand-700 disabled:opacity-50">
+        <button onClick={handleSave} disabled={state.saving} className="rounded-full bg-stone-950 px-6 py-2 text-sm font-medium text-white hover:bg-stone-800 disabled:opacity-50">
           {state.saving ? 'Saving...' : 'Save Changes'}
         </button>
       </div>
@@ -175,7 +175,7 @@ export function HomepageEditor() {
           <button
             key={t.key}
             onClick={() => dispatch({ type: 'SET_TAB', tab: t.key })}
-            className={`px-4 py-2 text-sm font-medium ${state.tab === t.key ? 'border-b-2 border-brand-600 text-brand-700' : 'text-stone-500 hover:text-stone-700'}`}
+            className={`px-4 py-2 text-sm font-medium ${state.tab === t.key ? 'border-b-2 border-stone-950 text-stone-950' : 'text-stone-500 hover:text-stone-700'}`}
           >
             {t.label}
           </button>

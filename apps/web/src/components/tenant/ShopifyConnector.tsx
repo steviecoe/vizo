@@ -252,7 +252,7 @@ export function ShopifyConnector() {
             <button
               onClick={handleSync}
               disabled={status === 'syncing'}
-              className="rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-50"
+              className="rounded-full bg-stone-950 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {status === 'syncing' ? 'Syncing...' : 'Sync Products'}
             </button>
@@ -288,7 +288,7 @@ export function ShopifyConnector() {
                   dispatch({ type: 'SET_FIELD', field: 'storeDomain', value: e.target.value })
                 }
                 placeholder="your-store.myshopify.com"
-                className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
               />
               {fieldErrors.storeDomain && (
                 <p className="mt-1 text-xs text-red-600" role="alert">
@@ -310,7 +310,7 @@ export function ShopifyConnector() {
                   dispatch({ type: 'SET_FIELD', field: 'adminApiKey', value: e.target.value })
                 }
                 placeholder="shpat_..."
-                className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
               />
               <p className="mt-1 text-xs text-stone-400">
                 Stored securely in Google Cloud Secret Manager. Never saved in the database.
@@ -333,7 +333,7 @@ export function ShopifyConnector() {
             <button
               type="submit"
               disabled={status === 'connecting'}
-              className="rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-50"
+              className="rounded-full bg-stone-950 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {status === 'connecting' ? 'Connecting...' : 'Connect Store'}
             </button>

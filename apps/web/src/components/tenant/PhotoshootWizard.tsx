@@ -254,8 +254,8 @@ export function PhotoshootWizard() {
       {/* Step indicator */}
       <nav className="flex gap-2" aria-label="Wizard steps">
         {STEPS.map((s, i) => (
-          <div key={s} className={`flex items-center gap-1 text-sm font-medium ${state.step === s ? 'text-brand-700' : 'text-stone-400'}`}>
-            <span className={`flex h-6 w-6 items-center justify-center rounded-full text-xs ${state.step === s ? 'bg-brand-600 text-white' : 'bg-stone-200 text-stone-500'}`}>
+          <div key={s} className={`flex items-center gap-1 text-sm font-medium ${state.step === s ? 'text-stone-950' : 'text-stone-400'}`}>
+            <span className={`flex h-6 w-6 items-center justify-center rounded-full text-xs ${state.step === s ? 'bg-stone-950 text-white' : 'bg-stone-200 text-stone-500'}`}>
               {i + 1}
             </span>
             {s === 'select' ? 'Select' : s === 'configure' ? 'Configure' : s === 'schedule' ? 'Schedule' : 'Review'}
@@ -282,7 +282,7 @@ export function PhotoshootWizard() {
             ) : (
               <div className="mt-2 flex flex-wrap gap-2">
                 {state.models.map((m) => (
-                  <button key={m.id} onClick={() => dispatch({ type: 'TOGGLE_MODEL', id: m.id })} className={`rounded-full border px-3 py-1.5 text-sm ${state.selectedModelIds.includes(m.id) ? 'border-brand-500 bg-brand-50 text-brand-700' : 'border-stone-300 text-stone-600 hover:border-stone-400'}`}>
+                  <button key={m.id} onClick={() => dispatch({ type: 'TOGGLE_MODEL', id: m.id })} className={`rounded-full border px-3 py-1.5 text-sm ${state.selectedModelIds.includes(m.id) ? 'border-stone-950 bg-stone-100 text-stone-950' : 'border-stone-300 text-stone-600 hover:border-stone-400'}`}>
                     {m.name}
                   </button>
                 ))}
@@ -297,7 +297,7 @@ export function PhotoshootWizard() {
             ) : (
               <div className="mt-2 flex flex-wrap gap-2">
                 {state.backgrounds.map((bg) => (
-                  <button key={bg.id} onClick={() => dispatch({ type: 'TOGGLE_BACKGROUND', id: bg.id })} className={`rounded-full border px-3 py-1.5 text-sm ${state.selectedBackgroundIds.includes(bg.id) ? 'border-brand-500 bg-brand-50 text-brand-700' : 'border-stone-300 text-stone-600 hover:border-stone-400'}`}>
+                  <button key={bg.id} onClick={() => dispatch({ type: 'TOGGLE_BACKGROUND', id: bg.id })} className={`rounded-full border px-3 py-1.5 text-sm ${state.selectedBackgroundIds.includes(bg.id) ? 'border-stone-950 bg-stone-100 text-stone-950' : 'border-stone-300 text-stone-600 hover:border-stone-400'}`}>
                     {bg.name}
                   </button>
                 ))}
@@ -310,7 +310,7 @@ export function PhotoshootWizard() {
             {state.products.length > 0 && (
               <div className="mt-2 flex flex-wrap gap-2">
                 {state.products.map((p) => (
-                  <button key={p.id} onClick={() => dispatch({ type: 'TOGGLE_PRODUCT', id: p.id })} className={`rounded-full border px-3 py-1.5 text-sm ${state.selectedProductIds.includes(p.id) ? 'border-brand-500 bg-brand-50 text-brand-700' : 'border-stone-300 text-stone-600 hover:border-stone-400'}`}>
+                  <button key={p.id} onClick={() => dispatch({ type: 'TOGGLE_PRODUCT', id: p.id })} className={`rounded-full border px-3 py-1.5 text-sm ${state.selectedProductIds.includes(p.id) ? 'border-stone-950 bg-stone-100 text-stone-950' : 'border-stone-300 text-stone-600 hover:border-stone-400'}`}>
                     {p.title}
                   </button>
                 ))}
@@ -351,7 +351,7 @@ export function PhotoshootWizard() {
           </section>
 
           <div className="flex justify-end">
-            <button onClick={handleNext} className="rounded-full bg-brand-600 px-6 py-2 text-sm font-medium text-white hover:bg-brand-700">
+            <button onClick={handleNext} className="rounded-full bg-stone-950 px-6 py-2 text-sm font-medium text-white hover:bg-stone-800">
               Next: Configure
             </button>
           </div>
@@ -394,7 +394,7 @@ export function PhotoshootWizard() {
 
           <div className="flex justify-between">
             <button onClick={() => dispatch({ type: 'PREV_STEP' })} className="rounded-md border border-stone-300 px-6 py-2 text-sm font-medium text-stone-700 hover:bg-stone-50">Back</button>
-            <button onClick={handleNext} className="rounded-full bg-brand-600 px-6 py-2 text-sm font-medium text-white hover:bg-brand-700">Next: Schedule</button>
+            <button onClick={handleNext} className="rounded-full bg-stone-950 px-6 py-2 text-sm font-medium text-white hover:bg-stone-800">Next: Schedule</button>
           </div>
         </div>
       )}
@@ -415,7 +415,7 @@ export function PhotoshootWizard() {
                   name="schedule"
                   checked={!state.isOvernight}
                   onChange={() => dispatch({ type: 'SET_OVERNIGHT', value: false })}
-                  className="h-4 w-4 text-brand-600"
+                  className="h-4 w-4 text-stone-950"
                 />
                 <div>
                   <span className="text-sm font-medium text-stone-900">Start immediately</span>
@@ -429,7 +429,7 @@ export function PhotoshootWizard() {
                   name="schedule"
                   checked={state.isOvernight}
                   onChange={() => dispatch({ type: 'SET_OVERNIGHT', value: true })}
-                  className="h-4 w-4 text-brand-600"
+                  className="h-4 w-4 text-stone-950"
                 />
                 <div>
                   <span className="text-sm font-medium text-stone-900">Schedule overnight</span>
@@ -450,7 +450,7 @@ export function PhotoshootWizard() {
 
           <div className="flex justify-between">
             <button onClick={() => dispatch({ type: 'PREV_STEP' })} className="rounded-md border border-stone-300 px-6 py-2 text-sm font-medium text-stone-700 hover:bg-stone-50">Back</button>
-            <button onClick={handleNext} className="rounded-full bg-brand-600 px-6 py-2 text-sm font-medium text-white hover:bg-brand-700">Next: Review</button>
+            <button onClick={handleNext} className="rounded-full bg-stone-950 px-6 py-2 text-sm font-medium text-white hover:bg-stone-800">Next: Review</button>
           </div>
         </div>
       )}
@@ -491,7 +491,7 @@ export function PhotoshootWizard() {
               </div>
               <div className="flex justify-between">
                 <dt className="text-stone-500">Total Images</dt>
-                <dd className="font-bold text-brand-700">{totalImages}</dd>
+                <dd className="font-bold text-stone-950">{totalImages}</dd>
               </div>
               <div className="flex justify-between">
                 <dt className="text-stone-500">Schedule</dt>
@@ -511,10 +511,10 @@ export function PhotoshootWizard() {
 
       {/* Submitting state */}
       {state.step === 'submitting' && (
-        <div className="rounded-lg border border-brand-200 bg-brand-50 p-12 text-center">
-          <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-brand-200 border-t-brand-600" />
-          <p className="mt-4 text-lg font-medium text-brand-800">Creating photoshoot...</p>
-          <p className="mt-1 text-sm text-brand-600">Credits are being reserved for all combinations.</p>
+        <div className="rounded-lg border border-stone-200 bg-stone-100 p-12 text-center">
+          <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-stone-200 border-t-stone-950" />
+          <p className="mt-4 text-lg font-medium text-stone-950">Creating photoshoot...</p>
+          <p className="mt-1 text-sm text-stone-950">Credits are being reserved for all combinations.</p>
         </div>
       )}
 
@@ -537,7 +537,7 @@ export function PhotoshootWizard() {
               ? 'Images will be generated at the scheduled time. Failed images will be automatically refunded.'
               : 'Generation is in progress. Failed images will be automatically refunded.'}
           </p>
-          <button onClick={() => dispatch({ type: 'RESET' })} className="mt-6 rounded-full bg-brand-600 px-6 py-2 text-sm font-medium text-white hover:bg-brand-700">
+          <button onClick={() => dispatch({ type: 'RESET' })} className="mt-6 rounded-full bg-stone-950 px-6 py-2 text-sm font-medium text-white hover:bg-stone-800">
             Create Another
           </button>
         </div>

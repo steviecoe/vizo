@@ -137,9 +137,9 @@ function CheckoutForm({
   }
 
   return (
-    <div className="rounded-lg border border-brand-200 bg-brand-50 p-6">
-      <h2 className="text-lg font-semibold font-display text-brand-900">Complete Payment</h2>
-      <p className="mt-1 text-sm text-brand-700">
+    <div className="rounded-lg border border-stone-200 bg-stone-100 p-6">
+      <h2 className="text-lg font-semibold font-display text-stone-950">Complete Payment</h2>
+      <p className="mt-1 text-sm text-stone-950">
         Enter your payment details below to purchase {creditAmount} credits.
       </p>
       <form onSubmit={handleSubmit} className="mt-4">
@@ -253,7 +253,7 @@ export function CreditPurchase() {
               <dd className={`mt-1 text-3xl font-bold ${
                 billingInfo.creditBalance <= billingInfo.lowCreditThreshold
                   ? 'text-red-600'
-                  : 'text-brand-700'
+                  : 'text-stone-950'
               }`}>
                 {billingInfo.creditBalance.toLocaleString()} credits
               </dd>
@@ -288,7 +288,7 @@ export function CreditPurchase() {
                   onClick={() => dispatch({ type: 'SET_CREDIT_AMOUNT', amount })}
                   className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
                     creditAmount === amount
-                      ? 'border-brand-500 bg-brand-50 text-brand-700'
+                      ? 'border-stone-950 bg-stone-100 text-stone-950'
                       : 'border-stone-300 text-stone-600 hover:border-stone-400'
                   }`}
                 >
@@ -338,7 +338,7 @@ export function CreditPurchase() {
           <button
             onClick={handlePurchase}
             disabled={creditAmount < 10 || status === 'creating_intent'}
-            className="mt-6 rounded-full bg-brand-600 px-6 py-2.5 text-sm font-medium text-white hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-50"
+            className="mt-6 rounded-full bg-stone-950 px-6 py-2.5 text-sm font-medium text-white hover:bg-stone-800 disabled:cursor-not-allowed disabled:opacity-50"
           >
             {status === 'creating_intent' ? 'Preparing payment...' : `Purchase ${creditAmount} Credits`}
           </button>
@@ -384,7 +384,7 @@ export function CreditPurchase() {
                 dispatch({ type: 'SET_LOADED', billingInfo: info });
               });
             }}
-            className="mt-4 rounded-full bg-brand-600 px-6 py-2 text-sm font-medium text-white hover:bg-brand-700"
+            className="mt-4 rounded-full bg-stone-950 px-6 py-2 text-sm font-medium text-white hover:bg-stone-800"
           >
             Done
           </button>

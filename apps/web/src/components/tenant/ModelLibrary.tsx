@@ -198,7 +198,7 @@ export function ModelLibrary() {
         {!showForm && (
           <button
             onClick={() => dispatch({ type: 'SHOW_CREATE_FORM' })}
-            className="rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700"
+            className="rounded-full bg-stone-950 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800"
           >
             Add Model
           </button>
@@ -267,7 +267,7 @@ export function ModelLibrary() {
           </fieldset>
 
           <div className="mt-6 flex gap-3">
-            <button type="submit" disabled={isSubmitting} className="rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700 disabled:opacity-50">
+            <button type="submit" disabled={isSubmitting} className="rounded-full bg-stone-950 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800 disabled:opacity-50">
               {isSubmitting ? 'Saving...' : editingModel ? 'Update Model' : 'Create Model'}
             </button>
             <button type="button" onClick={() => dispatch({ type: 'HIDE_FORM' })} disabled={isSubmitting} className="rounded-md border border-stone-300 px-4 py-2 text-sm font-medium text-stone-700 hover:bg-stone-50">
@@ -299,7 +299,7 @@ export function ModelLibrary() {
                 <div className="flex justify-between"><dt>Age</dt><dd className="font-medium">{model.age}</dd></div>
               </dl>
               <div className="mt-4 flex gap-2">
-                <button onClick={() => dispatch({ type: 'SHOW_EDIT_FORM', model })} className="text-sm text-brand-600 hover:text-brand-800">Edit</button>
+                <button onClick={() => dispatch({ type: 'SHOW_EDIT_FORM', model })} className="text-sm text-stone-950 hover:text-stone-950">Edit</button>
                 <button onClick={() => handleDelete(model.id)} className="text-sm text-red-600 hover:text-red-800">Delete</button>
               </div>
             </article>

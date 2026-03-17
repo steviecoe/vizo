@@ -173,7 +173,7 @@ export function AdminTopupDialog({ tenant, onClose, onCompleted }: AdminTopupDia
                 handleClose();
                 onCompleted();
               }}
-              className="mt-6 w-full rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700"
+              className="mt-6 w-full rounded-full bg-stone-950 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800"
             >
               Close
             </button>
@@ -220,7 +220,7 @@ export function AdminTopupDialog({ tenant, onClose, onCompleted }: AdminTopupDia
                   onChange={(e) =>
                     dispatch({ type: 'SET_FIELD', field: 'creditAmount', value: e.target.value })
                   }
-                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
                   placeholder="500"
                 />
                 {fieldErrors.creditAmount && (
@@ -241,7 +241,7 @@ export function AdminTopupDialog({ tenant, onClose, onCompleted }: AdminTopupDia
                   onChange={(e) =>
                     dispatch({ type: 'SET_FIELD', field: 'description', value: e.target.value })
                   }
-                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
                   placeholder="Free trial top-up"
                 />
                 {fieldErrors.description && (
@@ -272,7 +272,7 @@ export function AdminTopupDialog({ tenant, onClose, onCompleted }: AdminTopupDia
               type="submit"
               onClick={handleSubmit}
               disabled={isDisabled}
-              className="rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-50"
+              className="rounded-full bg-stone-950 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {isDisabled ? 'Adding...' : 'Add Credits'}
             </button>

@@ -118,7 +118,7 @@ export function TenantSettings() {
               type="checkbox"
               checked={autoDetect}
               onChange={(e) => dispatch({ type: 'SET_AUTO_DETECT', value: e.target.checked })}
-              className="h-4 w-4 rounded border-stone-300 text-brand-600 focus:ring-brand-500"
+              className="h-4 w-4 rounded border-stone-300 text-stone-950 focus:ring-stone-950"
             />
             <span className="text-sm text-stone-700">
               Auto-detect language based on location (GeoIP)
@@ -136,7 +136,7 @@ export function TenantSettings() {
               onChange={(e) =>
                 dispatch({ type: 'SET_FIELD', field: 'defaultLocale', value: e.target.value as SupportedLocale })
               }
-              className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+              className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
             >
               {SUPPORTED_LOCALES.map((loc) => (
                 <option key={loc} value={loc}>
@@ -166,7 +166,7 @@ export function TenantSettings() {
           <button
             onClick={handleSave}
             disabled={status === 'saving'}
-            className="rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-brand-700 disabled:opacity-50"
+            className="rounded-full bg-stone-950 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-stone-800 disabled:opacity-50"
           >
             {status === 'saving' ? 'Saving...' : 'Save Settings'}
           </button>

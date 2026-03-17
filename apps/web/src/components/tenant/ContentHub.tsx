@@ -108,7 +108,7 @@ export function ContentHub() {
       <div className="space-y-6">
         <button
           onClick={() => dispatch({ type: 'BACK_TO_LIST' })}
-          className="text-sm text-brand-600 hover:text-brand-800"
+          className="text-sm text-stone-950 hover:text-stone-950"
         >
           &larr; Back to articles
         </button>
@@ -161,7 +161,7 @@ export function ContentHub() {
             onClick={() => dispatch({ type: 'SET_CATEGORY', category: cat.value })}
             className={`whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
               activeCategory === cat.value
-                ? 'bg-brand-600 text-white'
+                ? 'bg-stone-950 text-white'
                 : 'text-stone-600 hover:bg-stone-100'
             }`}
           >

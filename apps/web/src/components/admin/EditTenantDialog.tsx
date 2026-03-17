@@ -342,7 +342,7 @@ export function EditTenantDialog({ tenant, onClose, onSaved, onDeleted }: EditTe
                   type="text"
                   value={fields.name}
                   onChange={(e) => dispatch({ type: 'SET_FIELD', field: 'name', value: e.target.value })}
-                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
                 />
                 {fieldErrors.name && (
                   <p className="mt-1 text-xs text-red-600" role="alert">{fieldErrors.name[0]}</p>
@@ -358,7 +358,7 @@ export function EditTenantDialog({ tenant, onClose, onSaved, onDeleted }: EditTe
                   type="text"
                   value={fields.slug}
                   onChange={(e) => dispatch({ type: 'SET_FIELD', field: 'slug', value: e.target.value })}
-                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
                 />
                 {fieldErrors.slug && (
                   <p className="mt-1 text-xs text-red-600" role="alert">{fieldErrors.slug[0]}</p>
@@ -377,7 +377,7 @@ export function EditTenantDialog({ tenant, onClose, onSaved, onDeleted }: EditTe
                     min="0.01"
                     value={fields.pricePerCredit}
                     onChange={(e) => dispatch({ type: 'SET_FIELD', field: 'pricePerCredit', value: e.target.value })}
-                    className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                    className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
                   />
                   {fieldErrors.pricePerCredit && (
                     <p className="mt-1 text-xs text-red-600" role="alert">{fieldErrors.pricePerCredit[0]}</p>
@@ -394,7 +394,7 @@ export function EditTenantDialog({ tenant, onClose, onSaved, onDeleted }: EditTe
                     min="0"
                     value={fields.lowCreditThreshold}
                     onChange={(e) => dispatch({ type: 'SET_FIELD', field: 'lowCreditThreshold', value: e.target.value })}
-                    className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                    className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
                   />
                 </div>
               </div>
@@ -408,7 +408,7 @@ export function EditTenantDialog({ tenant, onClose, onSaved, onDeleted }: EditTe
                   id="edit-status"
                   value={fields.status}
                   onChange={(e) => dispatch({ type: 'SET_FIELD', field: 'status', value: e.target.value })}
-                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                  className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
                 >
                   <option value="active">Active</option>
                   <option value="suspended">Suspended</option>
@@ -435,7 +435,7 @@ export function EditTenantDialog({ tenant, onClose, onSaved, onDeleted }: EditTe
                     onChange={(e) =>
                       dispatch({ type: 'SET_FIELD', field: key, value: e.target.checked })
                     }
-                    className="h-4 w-4 rounded border-stone-300 text-brand-600 focus:ring-brand-500"
+                    className="h-4 w-4 rounded border-stone-300 text-stone-950 focus:ring-stone-950"
                   />
                   <span className="text-sm text-stone-700">{label}</span>
                 </label>
@@ -463,7 +463,7 @@ export function EditTenantDialog({ tenant, onClose, onSaved, onDeleted }: EditTe
                   }}
                   placeholder="user@example.com"
                   disabled={inviting}
-                  className="block flex-1 rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 disabled:opacity-50"
+                  className="block flex-1 rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950 disabled:opacity-50"
                 />
                 <select
                   value={inviteRole}
@@ -520,7 +520,7 @@ export function EditTenantDialog({ tenant, onClose, onSaved, onDeleted }: EditTe
                             type="button"
                             onClick={() => handleSendInviteEmail(user.uid, user.email)}
                             disabled={sendingInviteUid === user.uid}
-                            className="text-xs text-brand-600 hover:text-brand-700 disabled:opacity-50"
+                            className="text-xs text-stone-950 hover:text-stone-950 disabled:opacity-50"
                           >
                             {sendingInviteUid === user.uid ? 'Sending...' : 'Send invite'}
                           </button>
@@ -563,7 +563,7 @@ export function EditTenantDialog({ tenant, onClose, onSaved, onDeleted }: EditTe
                     onChange={(e) => dispatch({ type: 'SET_FIELD', field: key, value: e.target.value })}
                     rows={2}
                     maxLength={2000}
-                    className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                    className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
                   />
                 </div>
               ))}
@@ -581,7 +581,7 @@ export function EditTenantDialog({ tenant, onClose, onSaved, onDeleted }: EditTe
                   autoComplete="off"
                   value={fields.geminiApiKey}
                   onChange={(e) => dispatch({ type: 'SET_FIELD', field: 'geminiApiKey', value: e.target.value })}
-                  className="block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                  className="block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
                   placeholder="Leave empty to keep current key"
                 />
                 <p className="mt-1 text-xs text-stone-400">
@@ -666,7 +666,7 @@ export function EditTenantDialog({ tenant, onClose, onSaved, onDeleted }: EditTe
                 type="submit"
                 onClick={handleSubmit}
                 disabled={isDisabled}
-                className="rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-50"
+                className="rounded-full bg-stone-950 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 {isDisabled ? 'Saving...' : 'Save Changes'}
               </button>

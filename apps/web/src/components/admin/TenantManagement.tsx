@@ -73,7 +73,7 @@ export function TenantManagement() {
         </div>
         <button
           onClick={() => setCreateOpen(true)}
-          className="rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700"
+          className="rounded-full bg-stone-950 px-4 py-2 text-sm font-medium text-white hover:bg-stone-800"
         >
           Create Tenant
         </button>
@@ -158,7 +158,7 @@ export function TenantManagement() {
                       <button
                         onClick={() => handleImpersonate(tenant)}
                         disabled={impersonating === tenant.id}
-                        className="rounded border border-brand-300 bg-brand-50 px-2.5 py-1 text-xs font-medium text-brand-700 hover:bg-brand-100 disabled:opacity-50"
+                        className="rounded border border-stone-300 bg-stone-100 px-2.5 py-1 text-xs font-medium text-stone-950 hover:bg-stone-100 disabled:opacity-50"
                       >
                         {impersonating === tenant.id
                           ? 'Switching...'
