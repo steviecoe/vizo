@@ -18,6 +18,16 @@ export function useAuth(): AuthState & { refreshClaims: () => Promise<void> } {
   });
 
   useEffect(() => {
+    // In mock mode, skip Firebase auth entirely and use a fake user
+    if (process.env.NEXT_PUBLIC_MOCK_API === 'true') {
+      setState({
+        user: { email: 'demo@vizogroup.com', displayName: 'Demo User', uid: 'mock-user-1' } as unknown as import('firebase/auth').User,
+        loading: false,
+        claims: { role: process.env.NEXT_PUBLIC_MOCK_ROLE || 'tenant_admin', tenantId: 'tenant-1', email: 'demo@vizogroup.com' },
+      });
+      return;
+    }
+
     const auth = getClientAuth();
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
       if (user) {
