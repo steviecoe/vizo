@@ -171,7 +171,7 @@ export function LoginForm() {
         </p>
         <button
           onClick={() => dispatch({ type: 'SET_FIELD', field: 'password', value: '' })}
-          className="mt-4 text-sm font-medium text-brand-600 hover:text-brand-700"
+          className="mt-4 text-sm font-medium text-stone-950 underline hover:text-stone-700"
         >
           Back to sign in
         </button>
@@ -183,10 +183,9 @@ export function LoginForm() {
     <div className="space-y-6">
       {/* Logo / Branding */}
       <div className="text-center">
-        <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600 text-xl font-bold text-white">
-          V
-        </div>
-        <h1 className="mt-4 text-2xl font-bold font-display text-stone-900">Sign in to Vizo</h1>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/vizo_logo.svg" alt="Vizo" className="mx-auto h-7" />
+        <h1 className="mt-6 text-2xl font-bold font-display text-stone-950">Sign in to Vizo</h1>
         <p className="mt-1 text-sm text-stone-500">
           AI-powered fashion photography platform
         </p>
@@ -196,7 +195,7 @@ export function LoginForm() {
       <button
         onClick={handleGoogleSignIn}
         disabled={isSubmitting}
-        className="flex w-full items-center justify-center gap-3 rounded-lg border border-stone-300 bg-white px-4 py-2.5 text-sm font-medium text-stone-700 shadow-sm transition-colors hover:bg-stone-50 disabled:opacity-50"
+        className="flex w-full items-center justify-center gap-3 rounded-full border border-stone-200 bg-stone-100 px-4 py-2.5 text-sm font-medium text-stone-950 transition-colors hover:bg-stone-200 disabled:opacity-50"
       >
         <svg className="h-5 w-5" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4" />
@@ -213,7 +212,7 @@ export function LoginForm() {
           <div className="w-full border-t border-stone-300" />
         </div>
         <div className="relative flex justify-center text-sm">
-          <span className="bg-white px-3 text-stone-500">or sign in with email</span>
+          <span className="bg-stone-50 px-3 text-stone-500">or sign in with email</span>
         </div>
       </div>
 
@@ -230,7 +229,7 @@ export function LoginForm() {
             required
             value={email}
             onChange={(e) => dispatch({ type: 'SET_FIELD', field: 'email', value: e.target.value })}
-            className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+            className="mt-1 block w-full rounded-lg border border-stone-200 bg-stone-100 px-3 py-2 text-sm text-stone-950 placeholder:text-stone-400 focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
             placeholder="you@company.com"
           />
         </div>
@@ -244,7 +243,7 @@ export function LoginForm() {
               type="button"
               onClick={handleForgotPassword}
               disabled={isSubmitting}
-              className="text-xs font-medium text-brand-600 hover:text-brand-700 disabled:opacity-50"
+              className="text-xs font-medium text-stone-500 hover:text-stone-950 disabled:opacity-50"
             >
               Forgot password?
             </button>
@@ -256,7 +255,7 @@ export function LoginForm() {
             required
             value={password}
             onChange={(e) => dispatch({ type: 'SET_FIELD', field: 'password', value: e.target.value })}
-            className="mt-1 block w-full rounded-md border border-stone-300 px-3 py-2 text-sm shadow-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+            className="mt-1 block w-full rounded-lg border border-stone-200 bg-stone-100 px-3 py-2 text-sm text-stone-950 placeholder:text-stone-400 focus:border-stone-950 focus:outline-none focus:ring-1 focus:ring-stone-950"
           />
         </div>
 
@@ -269,7 +268,7 @@ export function LoginForm() {
         <button
           type="submit"
           disabled={isSubmitting || !email || !password}
-          className="w-full rounded-full bg-brand-600 px-4 py-2.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-50"
+          className="w-full rounded-full bg-stone-950 px-4 py-2.5 text-sm font-medium text-stone-50 transition-colors hover:bg-stone-800 disabled:cursor-not-allowed disabled:opacity-50"
         >
           {isSubmitting ? 'Signing in...' : 'Sign In'}
         </button>
