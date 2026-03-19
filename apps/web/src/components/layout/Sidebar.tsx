@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useAuth } from '@/lib/hooks/useAuth';
 import { useEffect, useState } from 'react';
 import { callFunction } from '@/lib/firebase/functions';
+import { Sparkles, Image as ImageIcon, Users, MapPin } from 'lucide-react';
 
 // ─── Logo ─────────────────────────────────────────────────
 
@@ -134,10 +135,10 @@ interface NavItem {
 
 const tenantMainLinks: NavItem[] = [
   { href: '/tenant/dashboard', label: 'Dashboard', icon: IconDashboard },
-  { href: '/tenant/generate/quick', label: 'Studio', icon: IconStudio },
-  { href: '/tenant/repository', label: 'Image Repository', icon: IconImages },
-  { href: '/tenant/art-direction/models', label: 'Art Direction', icon: IconArtDirection, matchPrefix: true },
-  { href: '/tenant/generate/photoshoot', label: 'Photoshoot', icon: IconPhotoshoot },
+  { href: '/tenant/generate/quick', label: 'Studio', icon: ({ className }) => <Sparkles className={className} strokeWidth={1.5} /> },
+  { href: '/tenant/repository', label: 'Image Library', icon: ({ className }) => <ImageIcon className={className} strokeWidth={1.5} /> },
+  { href: '/tenant/art-direction/models', label: 'Models', icon: ({ className }) => <Users className={className} strokeWidth={1.5} />, matchPrefix: false },
+  { href: '/tenant/art-direction/backgrounds', label: 'Environments', icon: ({ className }) => <MapPin className={className} strokeWidth={1.5} /> },
   { href: '/tenant/products', label: 'Products', icon: IconProducts },
 ];
 
@@ -173,7 +174,7 @@ export function Sidebar() {
   }, [showTenant]);
 
   function isActive(item: NavItem): boolean {
-    if (item.matchPrefix) return pathname.startsWith('/tenant/art-direction');
+    if (item.matchPrefix) return pathname.startsWith(item.href);
     return pathname === item.href;
   }
 
